@@ -9,11 +9,16 @@
                 $scope.addItem = function(){
                     $scope.products.push($scope.addMe);
                 };
+                $scope.removeItem=function(index){
+                    $scope.produsct.splice(index,1);
+                };
             });
         </script>
         <div ng-app="myShoppingList" ng-controller="myCtrl">
             <ul>
-                <li ng-repeat="prod in products">{{prod}}</li>
+                <li ng-repeat="prod in products">{{prod}}
+                <span ng-click="removeItem($index)">&times;</span>
+                </li>
             </ul>
             <input type="text" name="input" ng-model="addMe"/>
             <button ng-click="addItem()">Add</button>
