@@ -1,6 +1,7 @@
 <!Doctype html>
 <html>
     <script type="text/javascript" src="js/angular.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
     <body>
         <script>
             var app= angular.module("myShoppingList", []);
@@ -21,7 +22,7 @@
                 };
             });
         </script>
-        <div ng-app="myShoppingList" ng-controller="myCtrl">
+        <div class="w3-border-amber" ng-app="myShoppingList" ng-controller="myCtrl">
             <ul>
                 <li ng-repeat="prod in products">{{prod}}
                 <span ng-click="removeItem($index)">&times;</span>
